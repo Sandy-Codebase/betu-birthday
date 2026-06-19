@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Betu ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-heart">❤️</div>
+        <h2>Preparing a surprise for Betu...</h2>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-container"></div>
+
+    <!-- Music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Button -->
+    <button id="musicBtn" class="music-btn">
+        🎵
+    </button>
+
+    <!-- PASSWORD SCREEN -->
+    <section id="passwordSection" class="screen">
+
+        <div class="glass-card">
+
+            <h1>Hey Betu ❤️</h1>
+
+            <p>
+                A special surprise is waiting for you...
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter Secret Password"
+            >
+
+            <button id="unlockBtn">
+                Unlock My Surprise ✨
+            </button>
+
+            <p id="errorMsg"></p>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" class="hidden">
+
+        <section class="hero-section">
+
+            <h1 id="typewriter"></h1>
+
+            <h2>Priyanshi (Betu) ❤️</h2>
+
+            <p>10 July 1999</p>
+
+            <button id="wishBtn">
+                Make A Wish 🎂
+            </button>
+
+        </section>
+
+        <section id="cakeSection" class="section hidden">
+
+            <div class="cake-container">
+
+                <h2 class="birthday-title">
+                    Happy Birthday My Beautiful Betu ❤️
+                </h2>
+
+                <div class="cake">
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="cake-layer"></div>
+
+                </div>
+
+                <button id="blowCandleBtn">
+                    Blow The Candle 🎂
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="glass-card">
+
+                <h2>To My Dearest Betu ❤️</h2>
+
+                <p>
+                    Dear Betu,<br><br>
+
+                    Jab se tum meri life mein aayi ho,
+                    meri duniya pehle se zyada khoobsurat ho gayi hai.<br><br>
+
+                    Tum meri aadat nahi,
+                    meri zaroorat ho.<br><br>
+
+                    Tumhari smile meri favourite notification hai.<br><br>
+
+                    Thank you for loving me,
+                    understanding me,
+                    and staying beside me.<br><br>
+
+                    I love you more than yesterday and less than tomorrow.<br><br>
+
+                    Happy Birthday My Love ❤️<br><br>
+
+                    Forever Yours,<br>
+                    Sandeep ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+            <div class="gallery-container">
+                <h2>
+                    Our Beautiful Memories 📸❤️
+                </h2>
+                <div class="gallery-grid">
+                    <img src="assets/images/couple1.jpg">
+                    <img src="assets/images/couple2.jpg">
+                    <img src="assets/images/couple3.jpg">
+                    <img src="assets/images/couple4.jpg">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="glass-card">
+                <h2>
+                    Reasons Why I Love You ❤️
+                </h2>
+                <br>
+                <p>❤️ Your Smile</p>
+                <br>
+                <p>❤️ Your Caring Nature</p>
+                <br>
+                <p>❤️ The Way You Understand Me</p>
+                <br>
+                <p>❤️ The Way You Make Me Feel Special</p>
+                <br>
+                <p>❤️ Everything About You</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="glass-card">
+                <h2>One Last Question ❤️</h2>
+                <p>Will You Keep Loving Me Forever?</p>
+                <button id="yesBtn">YES ❤️</button>
+                <button id="yesBtn2">DEFINITELY YES ❤️</button>
+                <div id="finalMessage" class="hidden">
+                    <h2>❤️ Thank You Betu ❤️</h2>
+                    <p>
+                        You are the most beautiful part of my life.<br>
+                        I promise to love you forever and ever. 😘
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
