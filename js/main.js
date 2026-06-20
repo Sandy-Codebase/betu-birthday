@@ -51,15 +51,13 @@ unlockBtn.addEventListener("click", () => {
 
 });
 
-const blowBtn =
-    document.getElementById("blowCandleBtn");
+const blowBtn = document.getElementById("blowCandleBtn");
 
 if(blowBtn){
 
     blowBtn.addEventListener("click", () => {
 
-        const flame =
-            document.querySelector(".flame");
+        const flame = document.querySelector(".flame");
 
         if(flame){
             flame.style.display = "none";
@@ -68,26 +66,46 @@ if(blowBtn){
         if(typeof confetti !== "undefined"){
 
             confetti({
-            particleCount:300,
-            spread:360,
-            startVelocity:45,
-            origin:{y:0.6}
+                particleCount:300,
+                spread:360,
+                startVelocity:45,
+                origin:{y:0.6}
             });
+
         }
 
         const msg = document.createElement("div");
-        msg.innerHTML =
-        "🎉 Happy Birthday My Beautiful Betu ❤️";
+
+        msg.innerHTML = `
+        <div style="
+        background:white;
+        padding:25px;
+        border-radius:20px;
+        text-align:center;
+        max-width:320px;
+        box-shadow:0 10px 30px rgba(0,0,0,.2);
+        ">
+            <h2 style="color:#ff4d6d;">
+                🎂 Wish Granted ❤️
+            </h2>
+
+            <p style="margin-top:10px;">
+                May your smile always shine brighter than these candles ✨
+                <br><br>
+                Happy Birthday My Beautiful Betu ❤️
+            </p>
+        </div>
+        `;
 
         msg.style.position = "fixed";
-        msg.style.top = "50%";
-        msg.style.left = "50%";
-        msg.style.transform = "translate(-50%,-50%)";
-        msg.style.background = "#ff4d6d";
-        msg.style.color = "white";
-        msg.style.padding = "20px 40px";
-        msg.style.borderRadius = "20px";
-        msg.style.fontSize = "24px";
+        msg.style.top = "0";
+        msg.style.left = "0";
+        msg.style.width = "100%";
+        msg.style.height = "100%";
+        msg.style.background = "rgba(0,0,0,.5)";
+        msg.style.display = "flex";
+        msg.style.justifyContent = "center";
+        msg.style.alignItems = "center";
         msg.style.zIndex = "9999";
 
         document.body.appendChild(msg);
@@ -96,7 +114,7 @@ if(blowBtn){
             msg.remove();
         }, 3000);
 
-            });
+    });
 
 }
 
