@@ -113,6 +113,13 @@ if (wishBtn) {
 
 const yesBtn = document.getElementById("yesBtn");
 const yesBtn2 = document.getElementById("yesBtn2");
+
+const popup = document.getElementById("lovePopup");
+const closePopup = document.getElementById("closePopup");
+
+const popupTitle = document.getElementById("popupTitle");
+const popupText = document.getElementById("popupText");
+
 if(yesBtn){
     yesBtn.addEventListener("click", () => {
         confetti({
@@ -130,22 +137,14 @@ if(yesBtn2){
     });
 }
 
-if(yesBtn){
-    yesBtn.addEventListener("click", () => {
-        alert("Yayyy ❤️ I knew it Betu 😘");
-    });
-}
-if(yesBtn2){
-    yesBtn2.addEventListener("click", () => {
-        alert("Forever and Ever ❤️✨");
-    });
-}
-
-const finalMessage =
-document.getElementById("finalMessage");
+const finalMessage = document.getElementById("finalMessage");
 
 if(yesBtn){
     yesBtn.addEventListener("click", () => {
+
+        popupTitle.innerHTML = "❤️ Yayyy Betu ❤️";
+        popupText.innerHTML = "I knew you would say YES 😘";
+        popup.classList.remove("hidden");
         finalMessage.classList.remove("hidden");
     });
 }
@@ -153,14 +152,22 @@ if(yesBtn){
 if(yesBtn2){
     yesBtn2.addEventListener("click", () => {
 
+        popupTitle.innerHTML = "💍 Forever & Ever ❤️";
+        popupText.innerHTML = "You just made my day, Betu 🥰";
+        popup.classList.remove("hidden");
         if(typeof confetti !== "undefined"){
             confetti({
                 particleCount:300,
                 spread:180
             });
         }
-
         finalMessage.classList.remove("hidden");
+    });
+}
+
+if(closePopup){
+    closePopup.addEventListener("click", () => {
+        popup.classList.add("hidden");
     });
 }
 
